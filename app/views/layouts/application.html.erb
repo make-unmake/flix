@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flix</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <%= image_tag('logo') %>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to  "All movies", movies_path %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <%= yield %>
+  </div>
+  <footer>
+    <a href="https://www.conekta.com">Conekta <%= Time.now.year%> </a>
+  </footer>
+</body>
+
+</html>
